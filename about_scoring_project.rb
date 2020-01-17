@@ -31,7 +31,11 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 
 def score(dice)
   # You need to write this method
-  0
+  if(dice[0] == 5)
+    50
+  else
+    0
+  end
 end
 
 class AboutScoringProject < Neo::Koan
