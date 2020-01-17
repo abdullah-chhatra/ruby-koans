@@ -33,6 +33,8 @@ def score(dice)
   # You need to write this method
   if(dice[0] == 5)
     50
+  elsif(dice[0] == 1)
+    100
   else
     0
   end
