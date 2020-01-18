@@ -31,8 +31,12 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 
 def score(dice)
   # You need to write this method
-  if(dice.size == 3 and dice[0] == 1 and dice[1] == 1 and dice[2] == 1)
-    return 1000
+  if(dice.size == 3 and dice.all? { |e| dice[0] == e })
+    if(dice[0] == 1)
+      return 1000
+    else
+      return dice[0] * 100
+    end
   end
   dice.inject(0) do |sum, value|
 
