@@ -26,6 +26,10 @@ class Proxy
     @messages.push(method_name)
     @object.send(method_name, *args)
   end
+
+  def called?(method_name)
+    @messages.include?(method_name)
+  end
 end
 
 # The proxy object should pass the following Koan:
